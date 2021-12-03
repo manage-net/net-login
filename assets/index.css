@@ -1,0 +1,44 @@
+html, body{
+    width: 100%;
+    height: 100%;
+  }
+
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -165px;
+    margin-top: -300px;
+    z-index: 20;
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+} 
+.center_name{
+    font-size: 64px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 25px;
+  }
+
+.center_p {
+    font-size: 25px;
+    font-weight: 400;
+    color:gray;
+    margin-bottom: 50px;
+  }
+.btn {
+    width: 130px;
+    padding: 10px;
+    border: 2px solid #333;
+    border-radius: 18px;
+    color: #333;
+    font-style: normal;
+    font-size: 16px;
+    
+    text-align: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    display: block;
+    transition: .4s;
+  }
+

@@ -16,7 +16,7 @@ app.use(express.json());
 const con = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: 'dami0223',
+    password: 'qwer1234',
     database: 'node_db',
 });
 
@@ -42,7 +42,7 @@ app.post('/register', (req, res) => {
     const age = body.age;
 
     con.query('select * from users where id=?', [id], (err, data) => {
-        if (data.length == 0) {
+        if (data.length === 0) {
             console.log('회원가입 성공');
             con.query('insert into users(id, pw, name, age) values(?,?,?,?)', [id, pw, name, age]);
             res.send('<script>alert("회원가입 성공"); location.href="/" </script> ');
