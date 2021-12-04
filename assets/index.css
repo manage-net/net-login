@@ -29,6 +29,7 @@ html, body{
 .btn {
     width: 130px;
     padding: 10px;
+    
     border: 2px solid #333;
     border-radius: 18px;
     color: #333;
@@ -41,4 +42,12 @@ html, body{
     display: block;
     transition: .4s;
   }
+
+  .text{
+    font-size: 20px;
+    font-weight: 400;
+    color: black;
+    margin-bottom: 25px;
+  }
+
 

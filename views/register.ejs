@@ -5,32 +5,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./index.css">
     <title>회원가입 | 로그인</title>
 </head>
 
 <body>
-    <table width="30%">
-        <tr>
-            <td><a href="/">Home</a></td>
-            <td><a href="/login">login</a></td>
-            <td><a href="/register">register</a></td>
-        </tr>
-    </table>
-
-    <div>
-        <h1> 회원정보입력 </h1>
+    <div class="center">
+ 
+        <h1 class="center_name"> Sign up </h1>
 
         <form method="post">
-            <label>아이디</label>
-            <input type="text" name="id" , required> <br>
-            <label>비밀번호</label>
-            <input type="password" name="pw" , required> <br>
-            <label>이름</label>
-            <input type="text" name="name" , required> <br>
-            <label>나이</label>
-            <input type="number" name="age" , required> <br><br>
+            <label class="text">아이디</label>
+            <br>
+            <input type="text" name="id" class="input" placeholder="아이디를 입력하세요" , required> <br>
+        
+            <label class="text">비밀번호</label>
+            <br>
+            <input type="password" name="pw"class="input" placeholder="비밀번호를 입력하세요" , required> <br>
+           
+            <label class="text">이름</label>
+            <br>
+            <input type="text" name="name"class="input" placeholder="이름을 입력하세요", required> <br>
+            
+            <label class="text">나이</label>
+            <br>
+            <input type="number" name="age"class="input" placeholder="나이를 입력하세요" , required> <br><br>
 
-            <input type="submit" value="회원가입">
+            <input type="submit" value="회원가입" class="btn">
+
         </form>
     </div>
 

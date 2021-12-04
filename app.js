@@ -16,7 +16,7 @@ app.use(express.json());
 const con = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: 'qwer1234',
+    password: '1234',
     database: 'node_db',
 });
 
@@ -42,15 +42,15 @@ app.post('/register', (req, res) => {
     const age = body.age;
 
     con.query('select * from users where id=?', [id], (err, data) => {
-        if (data.length === 0) {
+    
             console.log('회원가입 성공');
             con.query('insert into users(id, pw, name, age) values(?,?,?,?)', [id, pw, name, age]);
             res.send('<script>alert("회원가입 성공"); location.href="/" </script> ');
-        }
-        else {
-            console.log('회원가입 실패');
-            res.send('<script>alert("회원가입 실패!!() 동일한 정보가 존재합니다.)"); location.href="/register" </script>');
-        }
+        
+        // else {
+        //     console.log('회원가입 실패');
+        //     res.send('<script>alert("회원가입 실패!!() 동일한 정보가 존재합니다.)"); location.href="/register" </script>');
+        // }
     });
 });
 
@@ -65,7 +65,7 @@ app.post('/login', (req, res) => {
     const pw = body.pw;
 
     con.query('select * from users where id =?', [id], (err, data) => {
-        console.log(data[0]);
+       
         console.log(id);
         console.log(data[0].id);
         console.log(data[0].pw);
